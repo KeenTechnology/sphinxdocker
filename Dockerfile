@@ -4,8 +4,11 @@ RUN apt-get update
 RUN apt-get -y install software-properties-common
 RUN apt-get update
 RUN add-apt-repository -y ppa:builds/sphinxsearch-beta
+RUN add-apt-repository -y ppa:ondrej/php
 RUN apt-get update
 RUN apt-get -y install sphinxsearch
+RUN export DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y install php5.6-cli php5.6-readline
 RUN mkdir /var/lib/sphinx
 RUN mkdir /var/lib/sphinx/data
 RUN mkdir /var/log/sphinx
