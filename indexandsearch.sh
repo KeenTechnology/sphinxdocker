@@ -1,5 +1,5 @@
 #!/bin/bash
 
-/usr/bin/indexer -c /etc/sphinxsearch/sphinxy.conf --all
+/usr/bin/indexer -c /etc/sphinxsearch/sphinx.conf --all
 ./searchd.sh
 
